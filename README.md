@@ -19,3 +19,7 @@ The `MemoryStorage` API is pretty much in line with the [`Storage`](https://deve
 ```
 npm i github:axtk/memory-storage
 ```
+
+---
+
+\#browser \#nodejs
