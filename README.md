@@ -12,7 +12,14 @@ Creates an in-memory storage instance with the given `capacity`. When the number
 
 ### Methods
 
-The `MemoryStorage` API is pretty much in line with the [`Storage`](https://developer.mozilla.org/en-US/docs/Web/API/Storage) interface implemented by `window.localStorage`, `window.sessionStorage`, and [`localForage`](https://github.com/localForage/localForage#readme).
+The `MemoryStorage` API is in line with the [`Storage`](https://developer.mozilla.org/en-US/docs/Web/API/Storage) interface.
+
+```js
+let storage = new MemoryStorage(10);
+
+storage.setItem('x', 1);
+let x = storage.getItem('x');
+```
 
 ## Installation
 
