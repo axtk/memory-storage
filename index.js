@@ -46,4 +46,4 @@ class MemoryStorage {
     }
 }
 
-export default MemoryStorage;
+module.exports = MemoryStorage;
