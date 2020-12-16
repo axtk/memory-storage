@@ -2,24 +2,29 @@
 
 *An in-memory storage with a localStorage-like API*
 
-## `class MemoryStorage`
+## Exports
 
-### Constructor
+### `class MemoryStorage`
 
-#### `MemoryStorage(capacity?: number)`
-
-Creates an in-memory storage instance with the given `capacity`. When the number of entries reaches the `capacity` value and a new item is added to the storage, the first added item is removed from the storage to maintain the capacity. By default, the `capacity` is set to `Infinity`.
-
-### Methods
-
-The `MemoryStorage` API is in line with the [`Storage`](https://developer.mozilla.org/en-US/docs/Web/API/Storage) interface.
+Basic usage:
 
 ```js
-let storage = new MemoryStorage(10);
+const storage = new MemoryStorage(10);
 
 storage.setItem('x', 1);
+
 let x = storage.getItem('x');
 ```
+
+#### `new MemoryStorage(capacity?)`
+
+Creates an in-memory storage instance with the given `capacity`.
+
+- **`capacity?: number`**
+  - A maximum number of entries to be stored. When the number of entries reaches this value adding a new entry to the storage will cause the first added entry to be removed from the storage to maintain the capacity.
+  - Default: `Infinity`.
+
+The methods of the `MemoryStorage` class are in line with the [`Storage`](https://developer.mozilla.org/en-US/docs/Web/API/Storage) interface.
 
 ## Installation
 
