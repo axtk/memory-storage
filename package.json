@@ -1,6 +1,6 @@
 {
   "name": "memory-storage",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "An in-memory storage with a localStorage-like API",
   "main": "index.js",
   "keywords": [
