@@ -8,6 +8,9 @@ class MemoryStorage {
         this.capacity = typeof capacity === 'number' ? capacity : Infinity;
         this.revise();
     }
+    getCapacity() {
+        return this.capacity;
+    }
     revise() {
         while (this._keys.length > Math.max(this.capacity, 0))
             this.removeItem(this._keys[0]);
@@ -40,9 +43,6 @@ class MemoryStorage {
     }
     length() {
         return this._keys.length;
-    }
-    iterate(callback) {
-        this._keys.forEach((key, index) => callback(this._storage[key], key, index));
     }
 }
 

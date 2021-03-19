@@ -1,14 +1,16 @@
-# memory-storage
+[![npm](https://img.shields.io/npm/v/@axtk/memory-storage?labelColor=royalblue&color=royalblue&style=flat-square)](https://www.npmjs.com/package/@axtk/memory-storage)
+![browser](https://img.shields.io/badge/browser-✓-blue?labelColor=dodgerblue&color=dodgerblue&style=flat-square)
+![node](https://img.shields.io/badge/node-✓-blue?labelColor=dodgerblue&color=dodgerblue&style=flat-square)
 
 *An in-memory storage with a localStorage-like API*
 
-## Exports
+## `class MemoryStorage`
 
-### `class MemoryStorage`
-
-Basic usage:
+Usage:
 
 ```js
+const MemoryStorage = require('@axtk/memory-storage');
+
 const storage = new MemoryStorage(10);
 
 storage.setItem('x', 1);
@@ -25,13 +27,3 @@ Creates an in-memory storage instance with the given `capacity`.
   - Default: `Infinity`.
 
 The methods of the `MemoryStorage` class are in line with the [`Storage`](https://developer.mozilla.org/en-US/docs/Web/API/Storage) interface.
-
-## Installation
-
-```
-npm i github:axtk/memory-storage
-```
-
----
-
-\#browser \#nodejs

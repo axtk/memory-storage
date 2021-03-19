@@ -1,5 +1,5 @@
 {
-  "name": "memory-storage",
+  "name": "@axtk/memory-storage",
   "version": "1.0.1",
   "description": "An in-memory storage with a localStorage-like API",
   "main": "index.js",
@@ -9,5 +9,12 @@
     "localStorage"
   ],
   "author": "axtk",
-  "license": "ISC"
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/axtk/memory-storage.git"
+  },
+  "publishConfig": {
+    "access": "public"
+  }
 }
