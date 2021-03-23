@@ -12,8 +12,12 @@ class MemoryStorage {
         return this.capacity;
     }
     revise() {
-        while (this._keys.length > Math.max(this.capacity, 0))
-            this.removeItem(this._keys[0]);
+        let deleteCount = this._keys.length - Math.max(this.capacity, 0);
+        if (deleteCount > 0) {
+            for (let i = 0; i < deleteCount; i++)
+                delete this._storage[this._keys[i]];
+            this._keys.splice(0, deleteCount);
+        }
     }
     getItem(key) {
         return this._storage[key];
