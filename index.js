@@ -13,6 +13,7 @@ class MemoryStorage {
     }
     revise() {
         let deleteCount = this._keys.length - Math.max(this.capacity, 0);
+
         if (deleteCount > 0) {
             for (let i = 0; i < deleteCount; i++)
                 delete this._storage[this._keys[i]];
@@ -23,8 +24,12 @@ class MemoryStorage {
         return this._storage[key];
     }
     setItem(key, value) {
+        let k = this._keys.indexOf(key);
+        if (k !== -1) this._keys.splice(k, 1);
+
         this._keys.push(key);
         this._storage[key] = value;
+
         this.revise();
     }
     removeItem(key) {

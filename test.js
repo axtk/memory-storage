@@ -1,19 +1,28 @@
 const MemoryStorage = require('./');
 
-let storage, keys, len;
+let storage, keys, keys0, len, len0;
 let x, y, z;
 
 storage = new MemoryStorage(2);
 console.assert(storage.getCapacity() === 2, 'capacity');
 
 storage.setItem('x', 0);
+
+len0 = storage.length();
+keys0 = storage.keys();
+storage.setItem('x', 1);
+len = storage.length();
+keys = storage.keys();
+console.assert(len0 === len, 'same length after adding existing key');
+console.assert(JSON.stringify(keys0) === JSON.stringify(keys), 'same keys after adding existing key');
+
 storage.setItem('y', 'test');
 
 len = storage.length();
-console.assert(len === 2, 'length');
+console.assert(len === 2, 'length after adding x, y');
 
 x = storage.getItem('x');
-console.assert(x === 0, 'numeric value of x');
+console.assert(x === 1, 'numeric value of x');
 
 storage.setItem('z', {a: [1, 2]});
 console.assert(storage.length() === 2, 'length after overflow');
