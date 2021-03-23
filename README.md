@@ -2,11 +2,9 @@
 ![browser](https://img.shields.io/badge/browser-✓-blue?labelColor=dodgerblue&color=dodgerblue&style=flat-square)
 ![node](https://img.shields.io/badge/node-✓-blue?labelColor=dodgerblue&color=dodgerblue&style=flat-square)
 
-*An in-memory storage with a localStorage-like API*
+*An in-memory storage with a customizable capacity and with a localStorage-like API*
 
 ## `class MemoryStorage`
-
-Usage:
 
 ```js
 const MemoryStorage = require('@axtk/memory-storage');

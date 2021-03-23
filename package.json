@@ -1,15 +1,16 @@
 {
   "name": "@axtk/memory-storage",
   "version": "1.0.2",
-  "description": "An in-memory storage with a localStorage-like API",
+  "description": "An in-memory storage with a customizable capacity and with a localStorage-like API",
   "main": "index.js",
   "scripts": {
     "test": "node test.js"
   },
   "keywords": [
     "storage",
-    "in-memory",
-    "localStorage"
+    "capacity",
+    "size limit",
+    "in-memory"
   ],
   "author": "axtk",
   "license": "MIT",
